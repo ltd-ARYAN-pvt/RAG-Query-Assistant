@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  fastapi:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.fastapi
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../:/app
+    restart: always
+
+  gradio:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.gradio
+    ports:
+      - "7860:7860"
+    depends_on:
+      - fastapi
+    restart: always

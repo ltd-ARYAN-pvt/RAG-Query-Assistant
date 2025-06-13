@@ -1,5 +1,5 @@
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 
 def create_vector_store(chunks, persist_directory="./chroma_db"):
     embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")

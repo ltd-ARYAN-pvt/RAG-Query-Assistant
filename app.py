@@ -2,7 +2,8 @@ import gradio as gr
 import requests
 
 # FastAPI backend URL
-API_URL = "http://localhost:8000/rag/query"  # Update if deploying
+#API_URL = "http://fastapi:8000/rag/query"  # Use this URL if running in Docker Compose
+API_URL = "http://localhost:8000/rag/query"  # Use this URL if running locally without Docker
 
 def ask_question(user_question):
     try:
@@ -24,4 +25,4 @@ iface = gr.Interface(
 )
 
 if __name__ == "__main__":
-    iface.launch()
+    iface.launch(server_name="0.0.0.0", server_port=7860)

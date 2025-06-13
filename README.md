@@ -1,5 +1,7 @@
 # 🚀 RAG Query Assistant
+***Author - Aryan Pandey***
 
+---
 A FastAPI-based ⚡ Retrieval-Augmented Generation (RAG) system with Gradio UI 🎨 to answer user queries from historical JSON data using Google's Gemini Flash LLM 💬.
 
 ---
@@ -84,17 +86,24 @@ Visit: [http://localhost:7860](http://localhost:7860)
 ---
 
 ## 🐳 Docker Support
+### Step-1 Update app.py file
+```python
+API_URL = "http://fastapi:8000/rag/query"  # Use this URL if running in Docker Compose
+#API_URL = "http://localhost:8000/rag/query"  # Use this URL if running locally without Docker
 
-### Build Docker Image
-
-```bash
-docker build -t rag-query-assistant .
 ```
 
-### Run Docker Container
+### Step-2 Build Docker-Compose
 
 ```bash
-docker run -p 7860:7860 rag-query-assistant
+cd ./docker
+docker compose up --build
+```
+### Step-3 Check fastapi/docs and gradio on localhost
+
+```bash
+http://localhost:8000/docs
+http://localhost:7860/
 ```
 
 ---
