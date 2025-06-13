@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+env/
+
+# Chroma DB (Vector Store)
+chroma_db/
+
+# Gradio local files (if any)
+gradio/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Log files
+*.log
+
+# VSCode settings (optional, if you're using VSCode)
+.vscode/
+
+# Jupyter notebooks checkpoints (if used)
+.ipynb_checkpoints/
