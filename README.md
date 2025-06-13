@@ -16,6 +16,10 @@ The **RAG Query Assistant** is an intelligent question-answering system that:
 
 ---
 
+## 🖥️ Project Demo
+![Demo Gif](gifs/gradio_vid.gif)
+
+---
 ## 🛠️ Tech Stack
 
 * **FastAPI** - API backend
@@ -44,15 +48,28 @@ Create a `.env` file:
 
 ```text
 GOOGLE_API_KEY=your_google_api_key
+Api=Your_API
+Login=your_login_credential
+Pass=Password
 ```
 
-### 3. Install Dependencies
+### 3. Setup Virtual Environment
+
+```bash
+python -m venv venv
+```
+activate the python virtual env
+```bash
+.\venv\Scripts\Activate.ps1
+```
+
+### 4. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run the App
+### 5. Run the App
 
 ```bash
 python app.py
@@ -60,7 +77,7 @@ fastapi dev main.py
 ```
 in different terminal
 
-### 5. Access Gradio UI
+### 6. Access Gradio UI
 
 Visit: [http://localhost:7860](http://localhost:7860)
 
